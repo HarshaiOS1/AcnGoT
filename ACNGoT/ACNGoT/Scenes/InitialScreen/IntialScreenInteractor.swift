@@ -14,8 +14,16 @@ protocol CategoryBusinessLogic {
 class IntialScreenInteractor: CategoryBusinessLogic {
     
     weak var presenter : IntialScreenPresenter?
+    var dataWorker = DataWorker.init(categoriesAPI: CategoriesAPI())
     
     func fetchCategoryonLaunch(request: Categories.FetchCategories.Request) {
-        //call network worker
+        dataWorker.fetchCategories(request: request) { categories,error in
+            
+            print(categories)
+            print(error)
+            
+            
+
+        }
     }
 }
