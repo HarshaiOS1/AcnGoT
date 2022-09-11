@@ -1,0 +1,6 @@
+framework module Pods_ACNGoT_ACNGoTUITests {
+  umbrella header "Pods-ACNGoT-ACNGoTUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
