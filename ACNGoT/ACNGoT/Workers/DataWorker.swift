@@ -6,24 +6,38 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 protocol CategoryDataProtocol {
-    func fetchCategories(request: Categories.FetchCategories.Request, completionHandler: @escaping ([Category], Error?) -> Void)
+    func fetchCategories(request: Categories.FetchCategories.Request, completionHandler: @escaping ([Category]?, Error?) -> Void)
 }
 
 class DataWorker {
-    //inject coredata as well
     var categoriesAPI: CategoriesAPI
     init (categoriesAPI: CategoriesAPI) {
         self.categoriesAPI = categoriesAPI
     }
     
-    //check data in code data or call api method
-    
-    func fetchCategories(request: Categories.FetchCategories.Request, completionHandler: @escaping ([Category], Error) -> Void) {
-        categoriesAPI.fetchCategories(request: request) { categories, error in
-            print(categories)
-            print(error)
+    func fetchCategories(request: Categories.FetchCategories.Request, completionHandler: @escaping ([Category]?, Error?) -> Void) {
+        if let data = UserDefaults.standard.value(forKey: Constants.userdefaultKeys.categories.rawValue) {
+            do {
+                if let _data = data as? Data {
+                    let categories = try JSONDecoder().decode(Categories.FetchCategories.Response.self, from: _data)
+                    print(categories)
+                    completionHandler(categories,nil)
+                } else {
+                    categoriesAPI.fetchCategories(request: request) { categories, error in
+                        completionHandler(categories, error)
+                    }
+                }
+            } catch  {
+                completionHandler(nil,"error decoding data" as? Error)
+            }
+        } else {
+            categoriesAPI.fetchCategories(request: request) { categories, error in
+                completionHandler(categories, error)
+            }
         }
     }
 }

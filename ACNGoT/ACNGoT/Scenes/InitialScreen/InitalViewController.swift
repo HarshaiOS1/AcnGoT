@@ -9,53 +9,103 @@ import Foundation
 import UIKit
 import Lottie
 
-protocol InitalDisplayLogic: AnyObject
-{
-    func displayCategories(viewModel: Categories.FetchCategories.ViewModel)
+protocol InitalDisplayLogic: AnyObject {
+    func displayCategories(viewModel: Categories.FetchCategories.ViewModel, error: Error?)
 }
 
 class InitalViewController: UIViewController, InitalDisplayLogic {
     var interactor: CategoryBusinessLogic?
+    var lottieAnimationView: AnimationView?
+    var categoryList: [Category]?
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
     
     private func setup() {
+        let viewController = self
+        
         let interactor = IntialScreenInteractor()
         let presenter = IntialScreenPresenter()
 //        let router = ListOrdersRouter()
-        self.interactor = interactor
-        interactor.presenter = presenter
-        presenter.viewcontroller = self
         
+        viewController.interactor = interactor
+        presenter.viewcontroller = viewController
+        interactor.presenter = presenter
     }
     
-    func displayCategories(viewModel: Categories.FetchCategories.ViewModel) {
-        
+    func displayCategories(viewModel: Categories.FetchCategories.ViewModel, error: Error?) {
+        if (error == nil) {
+            categoryList = viewModel.categories
+            categoryList = categoryList?.sorted{$0.categoryName < $1.categoryName}
+            DispatchQueue.main.async {
+                self.lottieAnimationView?.removeFromSuperview()
+                self.showListOfCategories()
+            }
+        } else {
+            //show error
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        var lottieAnimationView = AnimationView.init()
+        self.title = "Categories"
+        self.navigationItem.largeTitleDisplayMode = .always
+        addLaunchAnimationView()
+    }
+        
+    func addLaunchAnimationView() {
         if let  path = Bundle.main.path(forResource: "castle-dragon-palace", ofType: "json") {
             lottieAnimationView = AnimationView(filePath: path)
         }
-        lottieAnimationView.frame = self.view.frame
-        lottieAnimationView.loopMode = .playOnce
-//        lottieAnimationView.play()
-        lottieAnimationView.animationSpeed = 2.0
-        lottieAnimationView.play { idDone in
+        lottieAnimationView?.frame = self.view.frame
+        lottieAnimationView?.loopMode = .playOnce
+        lottieAnimationView?.animationSpeed = 5.0
+        lottieAnimationView?.play(completion: { isdone in
             self.getCategories()
-        }
-        self.view.addSubview(lottieAnimationView)
+        })
         
+        if let animi = lottieAnimationView {
+            self.view.addSubview(animi)
+        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
+    func showListOfCategories() {
+        let tableview = UITableView.init(frame: self.view.frame)
+        tableview.delegate = self
+        tableview.dataSource = self
+        self.view.addSubview(tableview)
     }
     
     func getCategories() {
         let request = Categories.FetchCategories.Request()
         interactor?.fetchCategoryonLaunch(request: request)
     }
+}
+
+//MARK: UITableViewDelegate & UITableViewDataSource
+extension InitalViewController: UITableViewDelegate,UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categoryList?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell.init(frame: CGRect.init(x: 0.0, y: 0.0, width: tableView.frame.width, height: 100))
+        cell.layer.borderColor = UIColor.black.cgColor
+        let title = UILabel.init(frame: cell.frame)
+        title.text = categoryList?[indexPath.row].categoryName
+        title.textAlignment = .center
+        cell.contentView.addSubview(title)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print((categoryList?[indexPath.row].type ?? 0) + 1)
+    }
 }

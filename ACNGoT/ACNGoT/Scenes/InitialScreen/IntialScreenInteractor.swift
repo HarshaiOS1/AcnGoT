@@ -13,17 +13,14 @@ protocol CategoryBusinessLogic {
 
 class IntialScreenInteractor: CategoryBusinessLogic {
     
-    weak var presenter : IntialScreenPresenter?
+    var presenter : IntialScreenPresentationLogic?
     var dataWorker = DataWorker.init(categoriesAPI: CategoriesAPI())
     
     func fetchCategoryonLaunch(request: Categories.FetchCategories.Request) {
         dataWorker.fetchCategories(request: request) { categories,error in
-            
-            print(categories)
-            print(error)
-            
-            
-
+            if let categories = categories {
+                self.presenter?.presentFetchedCategory(response: categories,error: nil)
+            }
         }
     }
 }

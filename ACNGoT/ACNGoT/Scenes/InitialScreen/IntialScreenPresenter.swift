@@ -9,9 +9,12 @@ import Foundation
 import UIKit
 
 protocol IntialScreenPresentationLogic {
-    func presentFetchedOrders(response: Categories.FetchCategories.Response)
+    func presentFetchedCategory(response: Categories.FetchCategories.Response, error: Error?)
 }
 
-class IntialScreenPresenter {
+class IntialScreenPresenter: IntialScreenPresentationLogic {
     weak var viewcontroller : InitalDisplayLogic?
+    func presentFetchedCategory(response: Categories.FetchCategories.Response, error: Error?) {
+        viewcontroller?.displayCategories(viewModel: Categories.FetchCategories.ViewModel.init(categories: response),error: error)
+    }
 }

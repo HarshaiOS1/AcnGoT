@@ -11,7 +11,6 @@
 		3A8AC90928CDFE5D00AE536C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC90828CDFE5D00AE536C /* AppDelegate.swift */; };
 		3A8AC90B28CDFE5D00AE536C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC90A28CDFE5D00AE536C /* SceneDelegate.swift */; };
 		3A8AC91028CDFE5D00AE536C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AC90E28CDFE5D00AE536C /* Main.storyboard */; };
-		3A8AC91328CDFE5D00AE536C /* ACNGoT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC91128CDFE5D00AE536C /* ACNGoT.xcdatamodeld */; };
 		3A8AC91528CDFE5E00AE536C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AC91428CDFE5E00AE536C /* Assets.xcassets */; };
 		3A8AC91828CDFE5E00AE536C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AC91628CDFE5E00AE536C /* LaunchScreen.storyboard */; };
 		3A8AC92328CDFE5E00AE536C /* ACNGoTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC92228CDFE5E00AE536C /* ACNGoTTests.swift */; };
@@ -25,6 +24,7 @@
 		3A8AC95128CE325000AE536C /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC95028CE325000AE536C /* DataWorker.swift */; };
 		3A8AC95328CE3C8800AE536C /* CategoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC95228CE3C8800AE536C /* CategoriesAPI.swift */; };
 		3A8AC95528CE408D00AE536C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC95428CE408D00AE536C /* Category.swift */; };
+		3A8AC95828CE4C5A00AE536C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC95728CE4C5A00AE536C /* Utils.swift */; };
 		5E24B2C36F1F74F21F0B8706 /* Pods_ACNGoT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5D298B76A8A2EB4FC2CF5A /* Pods_ACNGoT.framework */; };
 		6B82F761C9DAC08BA65B3BD3 /* Pods_ACNGoT_ACNGoTUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F28F8659008B8DA5DACA3 /* Pods_ACNGoT_ACNGoTUITests.framework */; };
 /* End PBXBuildFile section */
@@ -51,7 +51,6 @@
 		3A8AC90828CDFE5D00AE536C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8AC90A28CDFE5D00AE536C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3A8AC90F28CDFE5D00AE536C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3A8AC91228CDFE5D00AE536C /* ACNGoT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ACNGoT.xcdatamodel; sourceTree = "<group>"; };
 		3A8AC91428CDFE5E00AE536C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8AC91728CDFE5E00AE536C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8AC91928CDFE5E00AE536C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		3A8AC95028CE325000AE536C /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
 		3A8AC95228CE3C8800AE536C /* CategoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAPI.swift; sourceTree = "<group>"; };
 		3A8AC95428CE408D00AE536C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3A8AC95728CE4C5A00AE536C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		517F28F8659008B8DA5DACA3 /* Pods_ACNGoT_ACNGoTUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACNGoT_ACNGoTUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DA46296CB466B31AE98BCD /* Pods-ACNGoT-ACNGoTUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACNGoT-ACNGoTUITests.release.xcconfig"; path = "Target Support Files/Pods-ACNGoT-ACNGoTUITests/Pods-ACNGoT-ACNGoTUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6561DC32E15672D205F0DB52 /* Pods-ACNGoTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACNGoTTests.release.xcconfig"; path = "Target Support Files/Pods-ACNGoTTests/Pods-ACNGoTTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +146,7 @@
 				3A8AC93E28CDFF8B00AE536C /* Services */,
 				3A8AC93D28CDFF7E00AE536C /* Workers */,
 				3A8AC93C28CDFF6D00AE536C /* Scenes */,
+				3A8AC95628CE4C4B00AE536C /* Utils */,
 				3A8AC90828CDFE5D00AE536C /* AppDelegate.swift */,
 				3A8AC90A28CDFE5D00AE536C /* SceneDelegate.swift */,
 				3A8AC90E28CDFE5D00AE536C /* Main.storyboard */,
@@ -153,7 +154,6 @@
 				3A8AC91628CDFE5E00AE536C /* LaunchScreen.storyboard */,
 				3A8AC94E28CE258D00AE536C /* castle-dragon-palace.json */,
 				3A8AC91928CDFE5E00AE536C /* Info.plist */,
-				3A8AC91128CDFE5D00AE536C /* ACNGoT.xcdatamodeld */,
 			);
 			path = ACNGoT;
 			sourceTree = "<group>";
@@ -216,6 +216,14 @@
 				3A8AC94C28CE1FAC00AE536C /* IntialScreenPresenter.swift */,
 			);
 			path = InitialScreen;
+			sourceTree = "<group>";
+		};
+		3A8AC95628CE4C4B00AE536C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3A8AC95728CE4C5A00AE536C /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F6A4A2F5BE59FC370F9ED75C /* Pods */ = {
@@ -478,7 +486,7 @@
 				3A8AC90B28CDFE5D00AE536C /* SceneDelegate.swift in Sources */,
 				3A8AC94928CE0D4500AE536C /* CategoryModels.swift in Sources */,
 				3A8AC94428CE06D800AE536C /* InitalViewController.swift in Sources */,
-				3A8AC91328CDFE5D00AE536C /* ACNGoT.xcdatamodeld in Sources */,
+				3A8AC95828CE4C5A00AE536C /* Utils.swift in Sources */,
 				3A8AC94D28CE1FAC00AE536C /* IntialScreenPresenter.swift in Sources */,
 				3A8AC95328CE3C8800AE536C /* CategoriesAPI.swift in Sources */,
 			);
@@ -828,19 +836,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3A8AC91128CDFE5D00AE536C /* ACNGoT.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3A8AC91228CDFE5D00AE536C /* ACNGoT.xcdatamodel */,
-			);
-			currentVersion = 3A8AC91228CDFE5D00AE536C /* ACNGoT.xcdatamodel */;
-			path = ACNGoT.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3A8AC8FD28CDFE5D00AE536C /* Project object */;
 }

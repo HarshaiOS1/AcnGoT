@@ -9,10 +9,9 @@ import Foundation
 enum Categories {
     // MARK: Use cases
     enum FetchCategories {
-        struct Request {
-            
+        struct Request {            
             func getRequest() -> URLRequest? {
-                if let url = URL(string: "https://private-anon-81757c5574-androidtestmobgen.apiary-mock.com/categories") {
+                if let url = URL(string: Constants.baseurl+Constants.getCategories) {
                     var request = URLRequest.init(url: url)
                     request.httpMethod = "GET"
                     return request
@@ -21,9 +20,8 @@ enum Categories {
             }
         }
         
-        struct Response {
-            var category: [Category]
-        }
+        typealias Response = [Category]
+        
         struct ViewModel {
             var categories : [Category]
         }
