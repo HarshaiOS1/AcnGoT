@@ -37,4 +37,26 @@ class CategoriesAPI: CategoryDataProtocol {
             completionHandler(nil,"Error with request" as? Error)
         }
     }
+    
+    func fetchListDetails(request: URLRequest, completionHandler: @escaping (Any? , Error?) -> Void) {
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            let decodableTypes : [Decodable.Type] = [Books.self,Charectors.self,Houses.self]
+            if error != nil {
+                completionHandler(nil,error)
+                return
+            } else {
+                if (Constants.positiveStatusCodes.contains((response as? HTTPURLResponse)?.statusCode ?? 400)) {
+                    guard let _data = data else {
+                        completionHandler(nil,"Error with request" as? Error)
+                        return
+                    }
+                    let details = JSONDecoder().decode(possibleTypes: decodableTypes.self, from: _data)
+                    completionHandler(details,nil)
+                    
+                } else {
+                    completionHandler(nil,"Error \(String(describing: (response as? HTTPURLResponse)))" as? Error)
+                }
+            }
+        }.resume()
+    }
 }

@@ -25,6 +25,16 @@
 		3A8AC95328CE3C8800AE536C /* CategoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC95228CE3C8800AE536C /* CategoriesAPI.swift */; };
 		3A8AC95528CE408D00AE536C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC95428CE408D00AE536C /* Category.swift */; };
 		3A8AC95828CE4C5A00AE536C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AC95728CE4C5A00AE536C /* Utils.swift */; };
+		3AB0B46728D0E9B400885B55 /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B46628D0E9B400885B55 /* CategoryRouter.swift */; };
+		3AB0B46A28D0F1F100885B55 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B46928D0F1F100885B55 /* CategoryListViewController.swift */; };
+		3AB0B46C28D0FB3A00885B55 /* CategoryListScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B46B28D0FB3A00885B55 /* CategoryListScreenInteractor.swift */; };
+		3AB0B46E28D0FB5A00885B55 /* CategoryListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B46D28D0FB5A00885B55 /* CategoryListScreenPresenter.swift */; };
+		3AB0B47028D0FB8800885B55 /* ListDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B46F28D0FB8800885B55 /* ListDataWorker.swift */; };
+		3AB0B47228D1013E00885B55 /* CategoryListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B47128D1013E00885B55 /* CategoryListModels.swift */; };
+		3AB0B47428D1157A00885B55 /* Charectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B47328D1157A00885B55 /* Charectors.swift */; };
+		3AB0B47628D1159D00885B55 /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B47528D1159D00885B55 /* Houses.swift */; };
+		3AB0B47828D116AF00885B55 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B47728D116AF00885B55 /* Books.swift */; };
+		3AB0B47A28D1210300885B55 /* ACNGotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B47928D1210300885B55 /* ACNGotExtensions.swift */; };
 		5E24B2C36F1F74F21F0B8706 /* Pods_ACNGoT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5D298B76A8A2EB4FC2CF5A /* Pods_ACNGoT.framework */; };
 		6B82F761C9DAC08BA65B3BD3 /* Pods_ACNGoT_ACNGoTUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F28F8659008B8DA5DACA3 /* Pods_ACNGoT_ACNGoTUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +78,16 @@
 		3A8AC95228CE3C8800AE536C /* CategoriesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesAPI.swift; sourceTree = "<group>"; };
 		3A8AC95428CE408D00AE536C /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3A8AC95728CE4C5A00AE536C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3AB0B46628D0E9B400885B55 /* CategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
+		3AB0B46928D0F1F100885B55 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		3AB0B46B28D0FB3A00885B55 /* CategoryListScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListScreenInteractor.swift; sourceTree = "<group>"; };
+		3AB0B46D28D0FB5A00885B55 /* CategoryListScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListScreenPresenter.swift; sourceTree = "<group>"; };
+		3AB0B46F28D0FB8800885B55 /* ListDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataWorker.swift; sourceTree = "<group>"; };
+		3AB0B47128D1013E00885B55 /* CategoryListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListModels.swift; sourceTree = "<group>"; };
+		3AB0B47328D1157A00885B55 /* Charectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charectors.swift; sourceTree = "<group>"; };
+		3AB0B47528D1159D00885B55 /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
+		3AB0B47728D116AF00885B55 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		3AB0B47928D1210300885B55 /* ACNGotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACNGotExtensions.swift; sourceTree = "<group>"; };
 		517F28F8659008B8DA5DACA3 /* Pods_ACNGoT_ACNGoTUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACNGoT_ACNGoTUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DA46296CB466B31AE98BCD /* Pods-ACNGoT-ACNGoTUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACNGoT-ACNGoTUITests.release.xcconfig"; path = "Target Support Files/Pods-ACNGoT-ACNGoTUITests/Pods-ACNGoT-ACNGoTUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6561DC32E15672D205F0DB52 /* Pods-ACNGoTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACNGoTTests.release.xcconfig"; path = "Target Support Files/Pods-ACNGoTTests/Pods-ACNGoTTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				3A8AC95428CE408D00AE536C /* Category.swift */,
+				3AB0B47328D1157A00885B55 /* Charectors.swift */,
+				3AB0B47528D1159D00885B55 /* Houses.swift */,
+				3AB0B47728D116AF00885B55 /* Books.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +209,7 @@
 		3A8AC93C28CDFF6D00AE536C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3AB0B46828D0F1D500885B55 /* CategoryDetailScreen */,
 				3A8AC94528CE0ADD00AE536C /* InitialScreen */,
 			);
 			path = Scenes;
@@ -195,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				3A8AC95028CE325000AE536C /* DataWorker.swift */,
+				3AB0B46F28D0FB8800885B55 /* ListDataWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -214,6 +239,7 @@
 				3A8AC94628CE0AFC00AE536C /* IntialScreenInteractor.swift */,
 				3A8AC94828CE0D4500AE536C /* CategoryModels.swift */,
 				3A8AC94C28CE1FAC00AE536C /* IntialScreenPresenter.swift */,
+				3AB0B46628D0E9B400885B55 /* CategoryRouter.swift */,
 			);
 			path = InitialScreen;
 			sourceTree = "<group>";
@@ -222,8 +248,20 @@
 			isa = PBXGroup;
 			children = (
 				3A8AC95728CE4C5A00AE536C /* Utils.swift */,
+				3AB0B47928D1210300885B55 /* ACNGotExtensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3AB0B46828D0F1D500885B55 /* CategoryDetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3AB0B46928D0F1F100885B55 /* CategoryListViewController.swift */,
+				3AB0B46B28D0FB3A00885B55 /* CategoryListScreenInteractor.swift */,
+				3AB0B46D28D0FB5A00885B55 /* CategoryListScreenPresenter.swift */,
+				3AB0B47128D1013E00885B55 /* CategoryListModels.swift */,
+			);
+			path = CategoryDetailScreen;
 			sourceTree = "<group>";
 		};
 		F6A4A2F5BE59FC370F9ED75C /* Pods */ = {
@@ -480,14 +518,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8AC94728CE0AFC00AE536C /* IntialScreenInteractor.swift in Sources */,
+				3AB0B47A28D1210300885B55 /* ACNGotExtensions.swift in Sources */,
+				3AB0B47828D116AF00885B55 /* Books.swift in Sources */,
+				3AB0B47228D1013E00885B55 /* CategoryListModels.swift in Sources */,
+				3AB0B47028D0FB8800885B55 /* ListDataWorker.swift in Sources */,
 				3A8AC95528CE408D00AE536C /* Category.swift in Sources */,
 				3A8AC90928CDFE5D00AE536C /* AppDelegate.swift in Sources */,
+				3AB0B46728D0E9B400885B55 /* CategoryRouter.swift in Sources */,
 				3A8AC95128CE325000AE536C /* DataWorker.swift in Sources */,
 				3A8AC90B28CDFE5D00AE536C /* SceneDelegate.swift in Sources */,
 				3A8AC94928CE0D4500AE536C /* CategoryModels.swift in Sources */,
+				3AB0B46C28D0FB3A00885B55 /* CategoryListScreenInteractor.swift in Sources */,
 				3A8AC94428CE06D800AE536C /* InitalViewController.swift in Sources */,
+				3AB0B46A28D0F1F100885B55 /* CategoryListViewController.swift in Sources */,
+				3AB0B47428D1157A00885B55 /* Charectors.swift in Sources */,
 				3A8AC95828CE4C5A00AE536C /* Utils.swift in Sources */,
 				3A8AC94D28CE1FAC00AE536C /* IntialScreenPresenter.swift in Sources */,
+				3AB0B46E28D0FB5A00885B55 /* CategoryListScreenPresenter.swift in Sources */,
+				3AB0B47628D1159D00885B55 /* Houses.swift in Sources */,
 				3A8AC95328CE3C8800AE536C /* CategoriesAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

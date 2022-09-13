@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import UIKit
-import CoreData
 
 protocol CategoryDataProtocol {
     func fetchCategories(request: Categories.FetchCategories.Request, completionHandler: @escaping ([Category]?, Error?) -> Void)

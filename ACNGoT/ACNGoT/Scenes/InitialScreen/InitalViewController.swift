@@ -15,6 +15,7 @@ protocol InitalDisplayLogic: AnyObject {
 
 class InitalViewController: UIViewController, InitalDisplayLogic {
     var interactor: CategoryBusinessLogic?
+    var router: RouterLogic?
     var lottieAnimationView: AnimationView?
     var categoryList: [Category]?
 
@@ -28,11 +29,13 @@ class InitalViewController: UIViewController, InitalDisplayLogic {
         
         let interactor = IntialScreenInteractor()
         let presenter = IntialScreenPresenter()
-//        let router = ListOrdersRouter()
+        let router = CategoryRouter()
         
         viewController.interactor = interactor
+        viewController.router = router
         presenter.viewcontroller = viewController
         interactor.presenter = presenter
+        router.viewcontroller = viewController
     }
     
     func displayCategories(viewModel: Categories.FetchCategories.ViewModel, error: Error?) {
@@ -106,6 +109,7 @@ extension InitalViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print((categoryList?[indexPath.row].type ?? 0) + 1)
+        router?.navigateToCatagory(routeType: ((categoryList?[indexPath.row].type ?? 0) + 1))
+        
     }
 }
