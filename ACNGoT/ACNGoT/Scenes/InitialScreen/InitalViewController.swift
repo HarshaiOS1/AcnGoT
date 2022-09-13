@@ -18,7 +18,7 @@ class InitalViewController: UIViewController, InitalDisplayLogic {
     var router: RouterLogic?
     var lottieAnimationView: AnimationView?
     var categoryList: [Category]?
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -57,7 +57,7 @@ class InitalViewController: UIViewController, InitalDisplayLogic {
         self.navigationItem.largeTitleDisplayMode = .always
         addLaunchAnimationView()
     }
-        
+    
     func addLaunchAnimationView() {
         if let  path = Bundle.main.path(forResource: "castle-dragon-palace", ofType: "json") {
             lottieAnimationView = AnimationView(filePath: path)
@@ -110,6 +110,5 @@ extension InitalViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         router?.navigateToCatagory(routeType: ((categoryList?[indexPath.row].type ?? 0) + 1))
-        
     }
 }

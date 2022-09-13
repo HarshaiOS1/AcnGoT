@@ -12,15 +12,14 @@ protocol CategoryListBusinessLogic {
 }
 
 class CategoryListScreenInteractor: CategoryListBusinessLogic {
-    
-    
     var presenter: CategoryListPresentationLogic?
     var listDataWorker = ListDataWorker.init(categoriesAPI: CategoriesAPI())
     
     func fetchCategoryListDetails(request: URLRequest) {
-        print("IPPROTO_KRYPTOLAN")
         listDataWorker.fetchCategories(request: request) { data, error in
-            
+            if let _data = data {
+                self.presenter?.presentFetchedListDetails(details: _data)
+            }
         }
     }
 }

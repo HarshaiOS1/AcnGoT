@@ -7,15 +7,14 @@
 
 import Foundation
 protocol CategoryListPresentationLogic {
-    func presentFetchedListDetails()
+    func presentFetchedListDetails(details: Any)
 }
 
 class CategoryListScreenPresenter: CategoryListPresentationLogic {
-    
     weak var vc: CategoryListLogic?
-    func presentFetchedListDetails() {
-        print("CategoryListPresentationLogic")
+    func presentFetchedListDetails(details: Any) {
+        DispatchQueue.main.async {
+            self.vc?.loadListDetails(details: details)
+        }
     }
-    
-    
 }

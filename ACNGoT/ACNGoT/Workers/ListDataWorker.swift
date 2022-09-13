@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CategoryListDetailProtocol {
-    func fetchCategories(request: URLRequest, completionHandler: @escaping ([Category]?, Error?) -> Void)
+    func fetchCategoyListDetails(request: URLRequest, completionHandler: @escaping (Any?, Error?) -> Void)
 }
 
 class ListDataWorker {
@@ -18,8 +18,8 @@ class ListDataWorker {
     }
     
     func fetchCategories(request: URLRequest, completionHandler: @escaping (Any?, Error?) -> Void) {
-        categoriesAPI.fetchListDetails(request: request) { response, error in
-            completionHandler(response,error)
+        categoriesAPI.fetchCategoyListDetails(request: request) { reponse, error in
+            completionHandler(reponse,error)
         }
     }
 }

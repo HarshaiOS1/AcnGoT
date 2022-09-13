@@ -22,13 +22,5 @@ enum CategoryList {
         }
         
         typealias Response = Any
-        
-//        struct Response {
-//            typealias HouseResponse = [House]
-//            typealias CharectorsResponse = [Char]
-//            typealias BooksResponse = [Book]
-//        }
-        
-        
     }
 }
