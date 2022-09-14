@@ -92,12 +92,13 @@ extension CategoryListViewController: UITableViewDelegate,UITableViewDataSource 
         if let books = bookDeatils {
             cell.titleLabel.text = books[indexPath.row].name
             cell.descriptionLabel.text = "authors: \(String(describing: books[indexPath.row].authors.first)), publisher: \(books[indexPath.row].publisher) , country: \(books[indexPath.row].country)"
+            cell.houseImageView.isHidden = true
         } else if let charectors = charectors {
             cell.titleLabel.text = "name: \(charectors[indexPath.row].name) played by: \(String(describing: charectors[indexPath.row].playedBy.first))"
             cell.descriptionLabel.text = charectors[indexPath.row].titles.first
+            cell.houseImageView.isHidden = true
         } else if let houses = houses {
             cell.updateUI(title: houses[indexPath.row].name, subtitle: houses[indexPath.row].title, house: houses[indexPath.row].region)
-            
         }
         return cell
     }

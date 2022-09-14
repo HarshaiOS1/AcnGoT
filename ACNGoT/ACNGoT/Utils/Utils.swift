@@ -24,7 +24,6 @@ enum CatagoryType : Int{
     case charectors = 3
 }
 
-
 enum HouseImage :String, CaseIterable {
     case theNorth = "The North"
     case theVale = "The Vale"
@@ -33,7 +32,7 @@ enum HouseImage :String, CaseIterable {
     case riverlands = "The Riverlands"
     case ironIslands = "Iron Islands"
     case westerlands = "TheWesterlands"
-    case stormlands = "Stormlands"
+    case stormlands = "The Stormlands"
 }
 
 extension HouseImage {

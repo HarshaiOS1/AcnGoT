@@ -37,6 +37,7 @@
 		3AB0B47A28D1210300885B55 /* ACNGotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B47928D1210300885B55 /* ACNGotExtensions.swift */; };
 		3AB0B47D28D12ED700885B55 /* ListDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B47C28D12ED700885B55 /* ListDetailTableViewCell.swift */; };
 		3AB0B48128D1308E00885B55 /* ListDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0B48028D1308E00885B55 /* ListDetailTableViewCell.xib */; };
+		3AB0B48328D193F000885B55 /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0B48228D193F000885B55 /* ImageCacheLoader.swift */; };
 		5E24B2C36F1F74F21F0B8706 /* Pods_ACNGoT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5D298B76A8A2EB4FC2CF5A /* Pods_ACNGoT.framework */; };
 		6B82F761C9DAC08BA65B3BD3 /* Pods_ACNGoT_ACNGoTUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F28F8659008B8DA5DACA3 /* Pods_ACNGoT_ACNGoTUITests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		3AB0B47928D1210300885B55 /* ACNGotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACNGotExtensions.swift; sourceTree = "<group>"; };
 		3AB0B47C28D12ED700885B55 /* ListDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailTableViewCell.swift; sourceTree = "<group>"; };
 		3AB0B48028D1308E00885B55 /* ListDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDetailTableViewCell.xib; sourceTree = "<group>"; };
+		3AB0B48228D193F000885B55 /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
 		517F28F8659008B8DA5DACA3 /* Pods_ACNGoT_ACNGoTUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACNGoT_ACNGoTUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DA46296CB466B31AE98BCD /* Pods-ACNGoT-ACNGoTUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACNGoT-ACNGoTUITests.release.xcconfig"; path = "Target Support Files/Pods-ACNGoT-ACNGoTUITests/Pods-ACNGoT-ACNGoTUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6561DC32E15672D205F0DB52 /* Pods-ACNGoTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACNGoTTests.release.xcconfig"; path = "Target Support Files/Pods-ACNGoTTests/Pods-ACNGoTTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			children = (
 				3A8AC95028CE325000AE536C /* DataWorker.swift */,
 				3AB0B46F28D0FB8800885B55 /* ListDataWorker.swift */,
+				3AB0B48228D193F000885B55 /* ImageCacheLoader.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				3A8AC90928CDFE5D00AE536C /* AppDelegate.swift in Sources */,
 				3AB0B46728D0E9B400885B55 /* CategoryRouter.swift in Sources */,
 				3A8AC95128CE325000AE536C /* DataWorker.swift in Sources */,
+				3AB0B48328D193F000885B55 /* ImageCacheLoader.swift in Sources */,
 				3A8AC90B28CDFE5D00AE536C /* SceneDelegate.swift in Sources */,
 				3A8AC94928CE0D4500AE536C /* CategoryModels.swift in Sources */,
 				3AB0B46C28D0FB3A00885B55 /* CategoryListScreenInteractor.swift in Sources */,

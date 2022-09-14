@@ -59,6 +59,4 @@ class CategoriesAPI: CategoryDataProtocol, CategoryListDetailProtocol {
             completionHandler(nil,"Error with request" as? Error)
         }
     }
-    
-//    func fetchListDetails(request: URLRequest, completionHandler: @escaping (Any? , Error?) -> Void)
 }

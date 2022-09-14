@@ -103,7 +103,7 @@ extension InitalViewController: UITableViewDelegate,UITableViewDataSource {
         cell.layer.borderColor = UIColor.black.cgColor
         let title = UILabel.init(frame: cell.frame)
         title.text = categoryList?[indexPath.row].categoryName
-        title.textAlignment = .center
+        title.textAlignment = .left
         cell.contentView.addSubview(title)
         return cell
     }

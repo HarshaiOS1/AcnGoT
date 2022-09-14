@@ -41,11 +41,12 @@ class ListDetailTableViewCell : UITableViewCell {
             default:
                 break
         }
-        if let url = URL(string: imageUrl) {
-            if let data = try? Data(contentsOf: url) {
-                houseImageView.image = UIImage(data: data)
-            }
-            
+        
+        let imageLoader = ImageCacheLoader()
+            imageLoader.obtainImageWithPath(imagePath: imageUrl, completionHandler: { (image) in
+                DispatchQueue.main.async {
+                    self.houseImageView.image = image
+                } 
+            })
         }
-    }
 }

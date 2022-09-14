@@ -7,7 +7,6 @@
 
 import Foundation
 enum Categories {
-    // MARK: Use cases
     enum FetchCategories {
         struct Request {            
             func getRequest() -> URLRequest? {

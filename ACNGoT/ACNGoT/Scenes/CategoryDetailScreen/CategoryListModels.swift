@@ -20,7 +20,6 @@ enum CategoryList {
                 return nil
             }
         }
-        
         typealias Response = Any
     }
 }
